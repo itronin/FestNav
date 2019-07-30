@@ -60,10 +60,10 @@
             </objects>
             <point key="canvasLocation" x="947.82608695652186" y="18.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Choose Fest View Controller-->
         <scene sceneID="Cpy-46-wTv">
             <objects>
-                <viewController id="948-Yo-zfh" sceneMemberID="viewController">
+                <viewController id="948-Yo-zfh" customClass="ChooseFestViewController" customModule="FestNav" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Oll-JH-9Ab">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -72,6 +72,16 @@
                                 <rect key="frame" x="0.0" y="141" width="414" height="374"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="genreCell" id="OP9-84-jaq">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OP9-84-jaq" id="03E-rU-TzA">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="ZSt-W8-wvz">
                                 <rect key="frame" x="48" y="573" width="319" height="216"/>
@@ -101,10 +111,10 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YVh-X9-ZWW">
-                                <rect key="frame" x="182" y="797" width="51" height="36"/>
+                                <rect key="frame" x="126" y="797" width="164" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                <state key="normal" title="NEXT"/>
+                                <state key="normal" title="SHOW FESTIVALS"/>
                                 <connections>
                                     <segue destination="lH6-3D-CSu" kind="show" id="smS-l0-0m6"/>
                                 </connections>
@@ -113,6 +123,9 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="25c-J9-APo"/>
                     </view>
+                    <connections>
+                        <outlet property="genreTableView" destination="CXR-Ln-PQt" id="vqj-yw-Hge"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj2-tj-y0c" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
